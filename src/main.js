@@ -1,5 +1,13 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
+import './assets/styles/global.css'
+import './index.css'
 
-createApp(App).use(router).mount('#app')
+const app = createApp(App)
+
+// Wait for DOM to be ready
+document.addEventListener('DOMContentLoaded', () => {
+  app.use(router)
+  app.mount('#app')
+})
